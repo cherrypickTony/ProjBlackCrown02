@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Atlas_Main_Top
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 4
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 9146ad0626a6f8e4ea00c139284d1dc0, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 167d7290ba4114f25b73d75fb4255747: 21300000
+    - c08bbde0c1962493cbb22e6dd4054866: 21300000
+    - 47b1b2c2903f14055a11454063a2528b: 21300000
+    - bb0903d3b14f84312a5f48b4fd81c8ca: 21300000
+    - 85e7df15f8fa5498aa767b04f7ffaac7: 21300000
+    - f7ae4cb5c1f884877b1244434f66c003: 21300000
+    - 604940e6250a74eff9457f9da40af401: 21300000
+    - c49bb137cb3d34a91a59c4967ce30a08: 21300000
+    - dc55e16992213427d86caab1c2a61d05: 21300000
+    - cf7e0ac90725246a08c551c9c57a4f4e: 21300000
+    - 6fa9448b2e4e14993b4cac32f51ceee7: 21300000
+    - 4234aadc115694f12b5a1f7090817c5b: 21300000
+    - 39e70aec08a624014a0a56525d4d858d: 21300000
+    - 466c267da02bf4c589d3e81ee73f7639: 21300000
+    - fd378c1f263e84c789c00ee82e74d27f: 21300000
+    - 1ad3aa8f5835a451e9f6bf28834c0c8b: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 167d7290ba4114f25b73d75fb4255747, type: 3}
+  - {fileID: 21300000, guid: c08bbde0c1962493cbb22e6dd4054866, type: 3}
+  - {fileID: 21300000, guid: 47b1b2c2903f14055a11454063a2528b, type: 3}
+  - {fileID: 21300000, guid: bb0903d3b14f84312a5f48b4fd81c8ca, type: 3}
+  - {fileID: 21300000, guid: 85e7df15f8fa5498aa767b04f7ffaac7, type: 3}
+  - {fileID: 21300000, guid: f7ae4cb5c1f884877b1244434f66c003, type: 3}
+  - {fileID: 21300000, guid: 604940e6250a74eff9457f9da40af401, type: 3}
+  - {fileID: 21300000, guid: c49bb137cb3d34a91a59c4967ce30a08, type: 3}
+  - {fileID: 21300000, guid: dc55e16992213427d86caab1c2a61d05, type: 3}
+  - {fileID: 21300000, guid: cf7e0ac90725246a08c551c9c57a4f4e, type: 3}
+  - {fileID: 21300000, guid: 6fa9448b2e4e14993b4cac32f51ceee7, type: 3}
+  - {fileID: 21300000, guid: 4234aadc115694f12b5a1f7090817c5b, type: 3}
+  - {fileID: 21300000, guid: 39e70aec08a624014a0a56525d4d858d, type: 3}
+  - {fileID: 21300000, guid: 466c267da02bf4c589d3e81ee73f7639, type: 3}
+  - {fileID: 21300000, guid: fd378c1f263e84c789c00ee82e74d27f, type: 3}
+  - {fileID: 21300000, guid: 1ad3aa8f5835a451e9f6bf28834c0c8b, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - function_icon_paper
+  - Slider_LevelProfile_Badge_White_Border
+  - Slider_LevelProfile_Profile_White_BgGlow
+  - function_icon_exclamation
+  - function_icon_list_2
+  - function_icon_timer
+  - function_icon_event
+  - LineTextFrame_05_Icon
+  - Slider_LevelProfile_SliderBottom_Fill_White_Bg
+  - Slider_LevelProfile_Badge_White_Bg
+  - Slider_LevelProfile_SliderBottom_Border
+  - Slider_LevelProfile_Profile_White_Border
+  - Slider_LevelProfile_SliderBottom_Fill_White_Light
+  - Slider_LevelProfile_Profile_White_Bg
+  - LineTextFrame_05_Bg
+  - LineTextFrame_05_BgLine
+  m_RenderDataMap: {}
+  m_Tag: Atlas_Main_Top
+  m_IsVariant: 0
