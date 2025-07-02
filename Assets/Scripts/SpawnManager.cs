@@ -89,7 +89,7 @@ public class SpawnManager : MonoBehaviour
     IEnumerator SpawnCor()
     {
         //추후, 스폰간격 결정
-        _spawnDelayTime = new WaitForSeconds(2.5f);
+        _spawnDelayTime = new WaitForSeconds(1.0f);
 
         while (true)
         {
