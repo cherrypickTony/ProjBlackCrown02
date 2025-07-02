@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6343418894553717966
+--- !u!1 &5277217702082551339
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,27 +8,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2249727954321332846}
-  - component: {fileID: 4380683045278235966}
-  - component: {fileID: 5304397511724169113}
-  - component: {fileID: 4604332337447571026}
-  - component: {fileID: 1792430865091241693}
-  - component: {fileID: 1711239152967359690}
-  - component: {fileID: 655207361203375918}
+  - component: {fileID: 8121299022354612649}
+  - component: {fileID: 339465176439597756}
+  - component: {fileID: 5953314423492155870}
+  - component: {fileID: 3231683660627765703}
+  - component: {fileID: 7765950052786896290}
+  - component: {fileID: 4182921693621720905}
+  - component: {fileID: 2095880876731845216}
   m_Layer: 0
-  m_Name: Main_00
+  m_Name: 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2249727954321332846
+--- !u!4 &8121299022354612649
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6343418894553717966}
+  m_GameObject: {fileID: 5277217702082551339}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -37,13 +37,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4380683045278235966
+--- !u!114 &339465176439597756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6343418894553717966}
+  m_GameObject: {fileID: 5277217702082551339}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da04b92b90dab46e580db786db1793dd, type: 3}
@@ -571,25 +571,25 @@ MonoBehaviour:
   - top/top_f_60
   skin:
   - skin/skin_1
-  skeletonAnimation: {fileID: 1792430865091241693}
+  skeletonAnimation: {fileID: 7765950052786896290}
   skeletonGraphic: {fileID: 0}
   <IsOptimizeSkin>k__BackingField: 0
   autoInit: 0
---- !u!33 &5304397511724169113
+--- !u!33 &5953314423492155870
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6343418894553717966}
+  m_GameObject: {fileID: 5277217702082551339}
   m_Mesh: {fileID: 0}
---- !u!23 &4604332337447571026
+--- !u!23 &3231683660627765703
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6343418894553717966}
+  m_GameObject: {fileID: 5277217702082551339}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -625,13 +625,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1792430865091241693
+--- !u!114 &7765950052786896290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6343418894553717966}
+  m_GameObject: {fileID: 5277217702082551339}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
@@ -668,25 +668,25 @@ MonoBehaviour:
   _animationName: Idle
   loop: 1
   timeScale: 1
---- !u!210 &1711239152967359690
+--- !u!210 &4182921693621720905
 SortingGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6343418894553717966}
+  m_GameObject: {fileID: 5277217702082551339}
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 0
---- !u!114 &655207361203375918
+--- !u!114 &2095880876731845216
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6343418894553717966}
+  m_GameObject: {fileID: 5277217702082551339}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a88d900a0f514b40ad1cfd9a090f6885, type: 3}
@@ -700,62 +700,62 @@ MonoBehaviour:
     selectedIndex: -1
     isHidden: 0
   - partType: 3
-    selectedIndex: -1
+    selectedIndex: 1
     isHidden: 0
   - partType: 4
-    selectedIndex: 58
+    selectedIndex: 17
     isHidden: 0
   - partType: 5
-    selectedIndex: 5
+    selectedIndex: 8
     isHidden: 0
   - partType: 6
-    selectedIndex: 18
+    selectedIndex: 2
     isHidden: 0
   - partType: 7
-    selectedIndex: -1
+    selectedIndex: 0
     isHidden: 0
   - partType: 8
-    selectedIndex: 9
+    selectedIndex: 0
     isHidden: 0
   - partType: 9
-    selectedIndex: 9
+    selectedIndex: 0
     isHidden: 0
   - partType: 10
     selectedIndex: -1
     isHidden: 0
   - partType: 11
-    selectedIndex: 2
+    selectedIndex: 8
     isHidden: 0
   - partType: 12
-    selectedIndex: -1
+    selectedIndex: 13
     isHidden: 0
   - partType: 13
     selectedIndex: -1
     isHidden: 0
   - partType: 14
-    selectedIndex: 26
+    selectedIndex: 2
     isHidden: 0
   - partType: 15
-    selectedIndex: 53
+    selectedIndex: 15
     isHidden: 0
   - partType: 16
     selectedIndex: 0
     isHidden: 0
   slotColors:
   - slotName: hair
-    color: {r: 1, g: 0.5882353, b: 0.25882354, a: 1}
+    color: {r: 0.93795985, g: 0.859871, b: 0.5834261, a: 1}
   - slotName: beard
-    color: {r: 0.41960785, g: 0.5882353, b: 0, a: 1}
+    color: {r: 0.31010598, g: 0.31010598, b: 0.31010598, a: 1}
   - slotName: brow
-    color: {r: 1, g: 0.69803923, b: 0.22352941, a: 1}
+    color: {r: 0.4128458, g: 0.4128458, b: 0.4128458, a: 1}
   - slotName: body
-    color: {r: 1, g: 0.7647059, b: 0.5803922, a: 1}
+    color: {r: 0.54983205, g: 0.3424571, b: 0.26040834, a: 1}
   colorPickerPositions:
   - partType: 8
-    position: {x: 0.6833636, y: 0.37245855}
+    position: {x: 0.3779839, y: 0.93795985}
   - partType: 2
-    position: {x: 0.8663696, y: 0.7137953}
+    position: {x: 0, y: 0.31010598}
   - partType: 5
-    position: {x: 0.71726245, y: 0.38737357}
+    position: {x: 0, y: 0.4128458}
   - partType: 16
-    position: {x: 0.6720641, y: 0.20093688}
+    position: {x: 0.52638566, y: 0.54983205}
