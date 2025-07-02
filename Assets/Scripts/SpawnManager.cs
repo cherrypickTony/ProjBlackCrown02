@@ -34,6 +34,7 @@ public class SpawnManager : MonoBehaviour
     private void Start()
     {
         InitPool();
+        StartCoroutine(SpawnCor());
     }
 
     private void InitPool()
@@ -53,6 +54,53 @@ public class SpawnManager : MonoBehaviour
             }
 
             _poolClassList.Add(_pc);
+        }
+    }
+
+    private Enemy Pop(string _id)
+    {
+        for (int i = 0; i < _poolClassList.Count; i++)
+        {
+            if (_poolClassList[i]._id == _id)
+            {
+                var _item = _poolClassList[i]._poolList[0];
+
+                _poolClassList[i]._poolList.RemoveAt(0);
+                _poolClassList[i]._poolList.Add(_item);
+
+                return _item;
+            }
+        }
+
+        return null;
+    }
+
+    private Vector3 GetSpawnPos()
+    {
+        Vector3 _rPos = Vector3.zero;
+
+        _rPos.x = 20f;
+        _rPos.y = Random.Range(-4.0f, 3.0f);
+
+        return _rPos;
+    }
+
+    private WaitForSeconds _spawnDelayTime;
+    IEnumerator SpawnCor()
+    {
+        //추후, 스폰간격 결정
+        _spawnDelayTime = new WaitForSeconds(2.0f);
+
+        while (true)
+        {
+            var _popItem = Pop("0");
+            if (_popItem != null)
+            {
+                _popItem.transform.position = GetSpawnPos();
+                _popItem.gameObject.SetActive(true);
+            }
+
+            yield return _spawnDelayTime;
         }
     }
 }
