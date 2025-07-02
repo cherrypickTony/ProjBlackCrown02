@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+#if UNITY_EDITOR
 namespace LayerLab.ArtMaker
 {
 
@@ -81,3 +82,4 @@ namespace LayerLab.ArtMaker
         }
     }
 }
+#endif
