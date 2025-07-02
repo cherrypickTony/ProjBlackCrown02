@@ -26,13 +26,21 @@ public class Player : MonoBehaviour
     private WaitForSeconds _attackDelayTime;
     IEnumerator AttackCor()
     {
-        //추후, 어택간격 결정
         _attackDelayTime = new WaitForSeconds(1.0f);
 
         while (true)
         {
             AttackNearestEnemy();
-            yield return _attackDelayTime;
+
+            if (_findTarget == null)
+            {
+                yield return _attackDelayTime;
+            }
+            else
+            {
+                TrackEntry current = _anim.AnimationState.GetCurrent(0);
+                while (current.TrackTime < current.AnimationEnd) yield return null;
+            }
         }
     }
 
@@ -83,40 +91,36 @@ public class Player : MonoBehaviour
     }
 
     Enemy _findTarget = null;
-    void OnAttackAnimationComplete(TrackEntry trackEntry)
+    void OnAttackAnimationEnded(TrackEntry trackEntry)
     {
         Debug.Log("Attack 애니메이션이 끝났습니다!");
 
         // 여기에 원하는 동작 실행
         if (_findTarget == null) return;
-        if (_findTarget.TakeDamage(1))
-        {
-            _findTarget = null;
-            AttackNearestEnemy();
-        }
+        if (_findTarget.TakeDamage(1)) _findTarget = null;
     }
 
     SkeletonAnimation _anim;
     private void SetSpineAnim(string _animID)
     {
-        if (_anim.AnimationState.GetCurrent(0)?.Animation.Name != _animID)
+        switch (_animID)
         {
-            switch(_animID)
-            {
-                case "Attack_Bow":
-                    TrackEntry current = _anim.AnimationState.GetCurrent(0);
+            case "Attack_Bow":
+                TrackEntry current = _anim.AnimationState.GetCurrent(0);
 
-                    if (current.Animation.Name == _animID &&
-                        current.TrackTime < current.AnimationEnd) return; //애니메이션 실행중이면 변경불가
+                if (current.Animation.Name == _animID &&
+                    current.TrackTime < current.AnimationEnd) return; //애니메이션 실행중이면 변경불가
 
-                    TrackEntry track = _anim.AnimationState.SetAnimation(0, _animID, true);
-                    track.Complete += OnAttackAnimationComplete; // 완료 콜백 연결
-                    break;
+                TrackEntry track = _anim.AnimationState.SetAnimation(0, _animID, false);
+                track.End += OnAttackAnimationEnded; // 완료 콜백 연결
+                break;
 
-                default:
-                    _anim.AnimationState.SetAnimation(0, _animID, false);
-                    break;
-            }
+            default:
+                if (_anim.AnimationState.GetCurrent(0)?.Animation.Name != _animID)
+                {
+                    _anim.AnimationState.SetAnimation(0, _animID, true);
+                }
+                break;
         }
     }
 }
