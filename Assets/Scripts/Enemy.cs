@@ -13,6 +13,9 @@ public class Enemy : MonoBehaviour
 
     float _movSpeed = 1.0f;
 
+    [SerializeField] int _currHp;
+    private int _maxHp;
+
     private void Awake()
     {
         _anim = transform.GetChild(0).GetComponent<SkeletonAnimation>();
@@ -20,8 +23,11 @@ public class Enemy : MonoBehaviour
         _shadowSortGroup = transform.GetChild(1).GetComponent<SpriteRenderer>();
     }
 
-    public void Initalize()
+    public void Initalize(int _maxHp)
     {
+        this._maxHp = _maxHp;
+        _currHp = this._maxHp;
+
         int order = -(int)(transform.position.y * 100);
         _sortGroup.sortingOrder = order;
         _shadowSortGroup.sortingOrder = order - 1;
@@ -57,5 +63,18 @@ public class Enemy : MonoBehaviour
         {
             _anim.AnimationState.SetAnimation(0, _animID, true);
         }
+    }
+
+    public bool TakeDamage(int _dmg)
+    {
+        _currHp = Mathf.Clamp(_currHp - _dmg, 0, _maxHp);
+
+        if (_currHp <= 0)
+        {
+            this.gameObject.SetActive(false);
+            return true;
+        }
+
+        return false;
     }
 }
