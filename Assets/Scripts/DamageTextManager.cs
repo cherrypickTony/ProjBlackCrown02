@@ -1,51 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static SpawnManager;
 
-public class DamageTextManager : MonoBehaviour
+public class DamageTextManager : Base_Pool<DamageTextManager>
 {
-    public static DamageTextManager instance;
+    [SerializeField] List<PoolClass<DamageText>> _poolList = new List<PoolClass<DamageText>>();
 
-    [SerializeField] Transform _poolSpawnTrans;
-    [SerializeField][Range(10, 100)] int _poolMaxCount;
-    [SerializeField] DamageText _damageTextPrefab;
-
-    [SerializeField] List<DamageText> _poolClassList = new List<DamageText>();
-
-    private void Awake()
+    protected override void Awake()
     {
-        if (instance != null)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+        base.Awake();
     }
 
-    private void Start()
+    protected void Start()
     {
         InitPool();
     }
 
-    private void InitPool()
+    protected override void InitPool()
     {
-        for (int i = 0; i < _poolMaxCount; i++)
+        base.InitPool();
+
+        for (int i = 0; i < _prefabList.Count; i++)
         {
-            var _item = Instantiate(_damageTextPrefab, _poolSpawnTrans);
-            _item.gameObject.SetActive(false);
-            _poolClassList.Add(_item);
+            string _id = _prefabList[i].gameObject.name;
+
+            PoolClass<DamageText> _pc = new PoolClass<DamageText>();
+            _pc._id = _id;
+
+            for (int j = 0; j < _poolMaxCount; j++)
+            {
+                var _item = Instantiate(_prefabList[i], _poolSpawnTrans).GetComponent<DamageText>();
+                _item.gameObject.SetActive(false);
+                _pc._poolList.Add(_item);
+            }
+
+            _poolList.Add(_pc);
         }
     }
 
     private DamageText Pop()
     {
-        var _item = _poolClassList[0];
-        _poolClassList.RemoveAt(0);
-        _poolClassList.Add(_item);
+        var _item = _poolList[0]._poolList[0];
+        _poolList[0]._poolList.RemoveAt(0);
+        _poolList[0]._poolList.Add(_item);
 
         return _item;
     }

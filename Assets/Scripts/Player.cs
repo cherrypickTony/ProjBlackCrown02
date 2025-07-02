@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
 
         if (closestEnemy != null)
         {
-            Debug.Log("가장 가까운 적 공격: " + closestEnemy.name);
+            //Debug.Log("가장 가까운 적 공격: " + closestEnemy.name);
 
             _findTarget = closestEnemy.GetComponent<Enemy>();
             SetSpineAnim("Attack_Bow");
@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
     Enemy _findTarget = null;
     void OnAttackAnimationEnded(TrackEntry trackEntry)
     {
-        Debug.Log("Attack 애니메이션이 끝났습니다!");
+        //Debug.Log("Attack 애니메이션이 끝났습니다!");
 
         // 여기에 원하는 동작 실행
         if (_findTarget == null) return;
