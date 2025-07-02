@@ -98,7 +98,7 @@ public class SpawnManager : MonoBehaviour
             {
                 _popItem.transform.position = GetSpawnPos();
                 _popItem.gameObject.SetActive(true);
-                _popItem.Initalize(3);
+                _popItem.Initalize(5);
             }
 
             yield return _spawnDelayTime;
