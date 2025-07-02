@@ -7,6 +7,8 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] Transform damageTextTrans;
+    DamageTextManager damageTextManager;
     SkeletonAnimation _anim;
     SortingGroup _sortGroup;
     SpriteRenderer _shadowSortGroup;
@@ -27,6 +29,11 @@ public class Enemy : MonoBehaviour
 
         _renderer = _anim.GetComponent<Renderer>();
         _mpb = new MaterialPropertyBlock();
+    }
+
+    private void Start()
+    {
+        damageTextManager = DamageTextManager.instance;
     }
 
     public void Initalize(int _maxHp)
@@ -76,6 +83,7 @@ public class Enemy : MonoBehaviour
 
     public bool TakeDamage(int _dmg)
     {
+        damageTextManager.SetDamageText(_dmg, damageTextTrans);
         _currHp = Mathf.Clamp(_currHp - _dmg, 0, _maxHp);
         FlashWhite();
 
