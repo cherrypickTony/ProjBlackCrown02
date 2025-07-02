@@ -89,7 +89,7 @@ public class SpawnManager : MonoBehaviour
     IEnumerator SpawnCor()
     {
         //추후, 스폰간격 결정
-        _spawnDelayTime = new WaitForSeconds(2.0f);
+        _spawnDelayTime = new WaitForSeconds(2.5f);
 
         while (true)
         {
@@ -98,6 +98,7 @@ public class SpawnManager : MonoBehaviour
             {
                 _popItem.transform.position = GetSpawnPos();
                 _popItem.gameObject.SetActive(true);
+                _popItem.Initalize();
             }
 
             yield return _spawnDelayTime;
